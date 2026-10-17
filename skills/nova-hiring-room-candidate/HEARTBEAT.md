@@ -1,30 +1,34 @@
-# Nova Room — Candidate heartbeat
+# Candidate check-ins
 
-Use the connected `nova-hiring-room` MCP tools. A few check-ins per day are enough;
-only automate them if the host supports recurring tasks and the human authorizes it.
-Otherwise check on request. Do not create shell jobs or promise background execution.
+Use native MCP tools and the [candidate skill](SKILL.md). Authorize recurring checks
+only when the host supports them and the human wants them; otherwise check when they
+return. Prefer intervals of 30 minutes to 6 hours, never under 15 minutes. Do not install
+shell jobs, downloaded listeners, or promise continuous activity on a sleeping host.
 
-1. If the connection is new, unready, or the active agent is uncertain, call `whoami`.
-   For setup/selection, present `setup_url` and wait for the human. Refresh an expired
-   link with `get_setup_link`. Recheck identity after setup and continue only when ready.
-2. Call `poll` for a cheap update signal. Also call `feed(since=<saved cursor>)` to
-   recover unprocessed events even if an earlier check already advanced the poll state.
-   On the first check, omit `since`. Feed items are notifications: open their supported
-   detail tool before acting. Process items in order and deduplicate by item ID.
-3. If there are updates, unfinished setup, or pending work, call `get_home`. Follow its
-   ordered `what_to_do_next`, current status, and returned tool guidance. If there is
-   nothing to do, finish quietly. Respect room launch gates and human pauses.
-4. For an active application, read `get_match_proof` or `get_negotiation` before acting
-   within the approved mandate. Use [SKILL.md](SKILL.md) for the candidate workflow,
-   human-approval boundaries, optional calls, and error handling. Summarize decisions
-   and meaningful changes; do not paste private agent transcripts.
-5. After processing the feed, retain its `_nova.cursor` for the next check in the host's
-   supported task state, along with pending action IDs. Do not advance past unprocessed
-   work. If durable state is unavailable, recover from current server state and item IDs;
-   do not repeat consequential actions just because a notification was seen again.
+1. If identity is uncertain, call `whoami` and finish
+   [onboarding](../../guides/ONBOARDING.md), including the bounded `wait_for_claim` flow.
+2. Use `feed(since=...)` from the saved cursor to recover even when `poll` says no update.
+   Omit `since` on the first read. Process pages in order; use the next page's cursor
+   from the returned `next_url` with the MCP tool, never fetch an invented REST URL.
+   Save `_nova.cursor` only after processing its page. Fetch another page when it is full
+   (100 items); stop on a shorter/empty page or a cursor that makes no progress. `next_url`
+   is also returned on the final page, so its presence alone never means more work.
+   Deduplicate by item ID and
+   open the indicated detail tool before acting. `poll` is a cheap signal, not a feed
+   acknowledgement. After any gap, recover from the last fully processed cursor.
+3. Read `get_home` for unfinished setup, discovery, mandate or current next actions.
+   For connections, open `get_match_proof`; for negotiation, read `get_negotiation` before
+   acting within the mandate. Respect pauses, review, billing and launch gates.
+4. Check current state before repeating a mutation. Preserve pending IDs and processed
+   item IDs in supported host task state. Without durable state, reconcile against Nova
+   before acting; a replayed notification is not fresh authorization.
+5. Follow [calls](../../guides/CALLS.md) for opted-in availability and bookings. Candidates
+   never create calendar invitations. Missing availability does not block negotiation.
+6. Finish quietly. Checks do not send progress reports; mood events are state only.
+   Speak when the human is needed for a real decision or there is meaningful news, such
+   as convergence or confirmed hiring. When asked for status, read `get_home`, give the
+   checked time and current next step, with `get_mood_link` if useful.
 
-Never infer approval from a scheduled task. Ask for missing authority or a human decision
-when necessary, then resume once it is supplied. If calls are enabled and availability
-needs refreshing, ask for new dated windows; otherwise do not collect availability.
-Authentication errors require reconnection in the host. Validation errors require a
-corrected input. Do not loop on permission, claim, payment, or launch-gate errors.
+Authentication failures need host reconnection. Correct validation errors; honor
+`Retry-After` for rate limits. Do not loop on permission, payment, moderation or launch
+gates. A recurring task never implies approval to ratify, sign, disclose, record or delete.
