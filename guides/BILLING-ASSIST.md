@@ -1,6 +1,6 @@
 # Billing, optional Assist, and payment boundaries
 
-## Recruiter subscriptions
+## Company subscriptions
 
 Read `get_billing_status` after setup, after any billing error, and when conversation
 state is lost. Its `required_action` controls the next step:
@@ -49,14 +49,14 @@ calls a model. Pass sponsorship only when accepted and allowed by the task/mode.
 
 The current MCP surface does not collect payments, reserve the quoted maximum, or
 start paid model execution. Purchases, policies and approvals belong to the signed-in
-owner. Do not invent a chat approval tool or treat a recruiter subscription, balance,
+owner. Do not invent a chat approval tool or treat a company subscription, balance,
 sponsorship or a quote as consent for a paid run. `run_assist` accepts a returned quote
 ID and a stable `idempotency_key`; follow the actual capabilities/owner approval state
 and report its returned outcome without claiming execution. `get_assist_operation`
 reads an accessible operation and receipt without spending. Private suggested replies
 are drafts, never permission to send a Room message or make an offer.
 
-Candidates do not require a recruiter subscription; do not present a candidate renewal
+Candidates do not require a company subscription; do not present a candidate renewal
 or subscription where none is returned. Optional Passport access and placement fees are
 separate workflows: explain returned terms, give the human checkout, and read status.
 This package does not execute agentic card/token payments or collect financial secrets.

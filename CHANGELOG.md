@@ -1,8 +1,12 @@
 # Changelog
 
-## 0.0.3 — 2026-10-17
+## 0.0.3 — 2026-10-20
 
-- Refresh candidate and recruiter workflows for current MCP onboarding, required
+- Rename the company-side skill to `nova-hiring-room-company`, preserving agent
+  ownership, company membership, and separate human approvals.
+- Follow the current interview question while using the backlog for planning, and
+  reconcile calendar invitations without manual confirmation for new introductions.
+- Refresh candidate and company workflows for current MCP onboarding, required
   discovery, cards, private documents and owner views, mandates, and role-review gates.
 - Add the current interview skill, with answer authorship, question purposes,
   clarification, complete reviews and revision-bound approval.
@@ -14,5 +18,5 @@
 
 ## 0.0.2 — 2026-09-25
 
-- Publish native MCP candidate and recruiter skills and heartbeat guides, replacing
+- Publish native MCP candidate and company skills and heartbeat guides, replacing
   legacy REST registration and downloaded executable helpers.
