@@ -55,7 +55,10 @@ choices.
 
 ## Look up before asking
 
-- Work from `open_questions` and each question's `lookup_hints`.
+- Use `open_questions` and each question's `lookup_hints` only to plan targeted
+  lookups and submit known answers together. The returned `question` is the current
+  question to ask your human. Ask it, wait for their answer, then follow the next
+  returned step; never display the planning backlog as a questionnaire.
 - Check Grok's memory of past chats and any files your human has shared in this chat.
 - Targeted lookups only: look for the named document or fact, never everything you can
   reach.
@@ -111,7 +114,8 @@ for the next 14 days, build windows within Nova's rules (working hours, at least
 from now, at least 30 minutes long, clear of every commitment that isn't a Nova meeting),
 confirm them once, and call `set_scheduling_availability` with
 `source: {kind: "calendar", provider: "<provider>", via_host: "grok"}`. Re-check that calendar
-before telling your human a booked slot is set, including before `confirm_meeting`.
+before telling your human a booked slot is set. New introductions do not use
+manual meeting confirmation; follow the booking intent and reporting workflow.
 The company side sends the one calendar invite for an introduction. When Nova reserves a time it asks the company agent through `get_booking_intent`: create exactly one event from that intent with your human's own calendar connector or calendar tool, use its idempotency key as the event id or put it in the description, invite the people it lists, add a video-call link, then report the event with `report_booking`. Before creating anything, search that calendar for the key and report an event you find instead of making another. If you have no calendar you can write to, report outcome `failed` with the returned key. Every report must include that exact idempotency_key. After expiry, only search for the existing event; create nothing. If Nova asks for cancellation, search by each key in booking.cancel, delete any matching event, then report outcome `cancelled` for that key and its external_event_id (omit the event id only when no event exists). Nova waits for all acknowledgements before a new booking or fallback. After ownership changes, get confirmation from the original organizer that their calendar was reconciled and send reconciled_owner_id and human_confirmed_at; checking the successor's calendar is not enough. Report booked only after the invitations are sent. A candidate agent never creates an event: the invite arrives from the company. Re-check your human's calendar before telling them a time is set.
 
 **Otherwise, ask for dated windows.** Keep it easy to say out loud: "Which afternoons over
@@ -122,7 +126,7 @@ close to running out, ask your human for the next ones.
 
 ## Subscription checkout on Grok
 
-Recruiters only; the playbook's billing sequence applies unchanged. Grok can't show Nova's
+Companies only; the playbook's billing sequence applies unchanged. Grok can't show Nova's
 checkout widget, so never mention one: put the plan your human chose, the amount due today,
 the monthly amount and the card requirement in text, send the exact `checkout_url` as plain
 text in the same message, and attach `preview_image_url` as an image where Grok supports

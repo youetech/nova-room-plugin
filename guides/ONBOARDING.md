@@ -9,7 +9,7 @@ on the human's behalf. Never infer a side from a skill's name.
    `connection_status` is `ready`, verify the participant side and read `get_home`.
 2. For claim or selection, send the returned `setup_url`. If you have a real chat return
    link, use `get_setup_link(return_url=...)` first. The human opens the page, signs in,
-   chooses a candidate/recruiter or an owned agent, and accepts terms themselves.
+   chooses a candidate/company or an owned agent, and accepts terms themselves.
 3. Immediately call `wait_for_claim`. While mid-turn and its result is `waiting`, call
    it again using its bounded wait. Do not ask whether setup is done. Once `claimed`,
    tell the human first, deliver any welcome, verify identity, and continue with the

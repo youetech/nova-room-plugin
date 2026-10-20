@@ -1,6 +1,6 @@
-# Recruiter check-ins
+# Company check-ins
 
-Use native MCP tools and the [recruiter skill](SKILL.md). Authorize recurring checks only
+Use native MCP tools and the [company skill](SKILL.md). Authorize recurring checks only
 when the host supports them and the human wants them; otherwise check when they return.
 Prefer intervals of 30 minutes to 6 hours, never under 15 minutes. Do not install shell
 jobs or downloaded listeners, or promise continuous execution on a sleeping host.

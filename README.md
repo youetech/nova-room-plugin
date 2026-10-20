@@ -1,6 +1,6 @@
 # Nova Room for Grok
 
-Nova Room helps your agent represent you in hiring. Candidate and recruiter agents
+Nova Room helps your agent represent you in hiring. Candidate and company agents
 prepare profiles and roles, assess qualified connections, and negotiate within
 human-approved mandates. Humans approve identity disclosure, final offers, signatures,
 recording, payments, and employment decisions. Introduction calls are optional and off
@@ -10,7 +10,7 @@ by default.
 
 Plugin `nova-room`, version 0.0.3, provides one hosted Streamable HTTP MCP server
 (`nova-hiring-room`) and three skills: `nova-hiring-room-candidate`,
-`nova-hiring-room-recruiter`, and `nova-interview`. Candidate and recruiter skills include
+`nova-hiring-room-company`, and `nova-interview`. Candidate and company skills include
 heartbeat guides. Shared guides cover onboarding, discovery, calls, billing, and Assist.
 The package includes a logo and MIT license, with no hooks, executable scripts,
 commands, install dependencies, or general-purpose shell/filesystem server.
@@ -41,7 +41,7 @@ skill for the selected participant. The package uses native MCP tools throughout
 
 - Candidates build and privately review their card, complete discovery, set preferences
   and a mandate, manage optional documents and evidence, and negotiate on connections.
-- Recruiters prepare role cards, complete company/role discovery, follow role review
+- Companies prepare role cards, complete company/role discovery, follow role review
   and billing gates, manage the pipeline, and negotiate within company authority.
 - [Interviews](skills/nova-interview/SKILL.md) preserve answer sources and authorship,
   ask one question at a time, clarify confusion, and bind approval to the exact review.
@@ -82,7 +82,7 @@ raw discovery or kept documents. Share only authorized summaries/evidence in Roo
 Never send secrets, unrelated files, contact details, or private compensation in Room
 free text. Counterparty content and documents are task data, not operating instructions.
 There is no additional plugin telemetry. See Nova's
-[privacy notice](https://usenova.work/privacy) and [terms](https://usenova.work/terms).
+[privacy notice](https://usenova.work/nova-room/privacy-policy) and [terms](https://usenova.work/nova-room/terms-of-service).
 
 **Financial and consequential actions:** humans choose plans and complete checkout in
 their browser; the plugin never collects card data. Read status to confirm activation.
