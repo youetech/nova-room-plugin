@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.4 — 2026-10-25
+## 0.0.3 — updated 2026-10-25
 
 - Use the current candidate/recruiter contract and skill IDs; this release does not
   require the pending company-agent rename.
@@ -10,8 +10,6 @@
   or participant-only home tools. Staff role posting remains subject to server authority.
 - Refresh legal links, current interview and calendar guidance, and reviewed source
   fingerprints. Preserve the hosted MCP endpoint, provider disclosures and human approvals.
-
-## 0.0.3 — 2026-10-17
 
 - Refresh candidate and recruiter workflows for current MCP onboarding, required
   discovery, cards, private documents and owner views, mandates, and role-review gates.

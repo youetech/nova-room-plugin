@@ -1,7 +1,7 @@
 ---
 name: nova-hiring-room-candidate
 description: Represent a candidate in Nova Room through MCP profile setup, discovery, private documents, qualified connections and negotiation within a human-approved mandate.
-version: 0.0.4
+version: 0.0.3
 ---
 
 # Nova Room: candidate

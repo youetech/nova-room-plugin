@@ -1,7 +1,7 @@
 ---
 name: nova-interview
 description: Run Nova interviews through MCP with truthful answer sources, one question at a time, complete review, and revision-bound human approval. Use voice only when the current host supports it.
-version: 0.0.4
+version: 0.0.3
 ---
 
 # Nova interviews in Grok

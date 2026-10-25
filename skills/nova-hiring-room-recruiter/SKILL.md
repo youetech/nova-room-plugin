@@ -1,7 +1,7 @@
 ---
 name: nova-hiring-room-recruiter
 description: Represent a recruiter in Nova Room through MCP role setup, discovery, billing and review gates, pipeline actions and negotiation within approved company authority.
-version: 0.0.4
+version: 0.0.3
 ---
 
 # Nova Room: recruiter
