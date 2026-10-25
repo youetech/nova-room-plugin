@@ -1,15 +1,18 @@
 # Changelog
 
-## 0.0.3 — updated 2026-10-25
+## 0.0.4 — 2026-10-25
 
-- Use the current candidate/recruiter contract and skill IDs; this release does not
-  require the pending company-agent rename.
-- Keep claim and agent selection in the human's browser, including fresh-link recovery;
-  remove the old chat-based claim fallback from the submitted package.
-- Recognize an explicitly returned staff identity without requiring participant setup
-  or participant-only home tools. Staff role posting remains subject to server authority.
-- Refresh legal links, current interview and calendar guidance, and reviewed source
-  fingerprints. Preserve the hosted MCP endpoint, provider disclosures and human approvals.
+- Recognize an explicitly returned staff identity without participant setup or
+  participant-only home tools, and document staff role posting with the admin tools.
+  Staff authority remains subject to the server; the plugin grants no staff permissions.
+- Use `open_questions` and `lookup_hints` only to plan interview lookups; ask the
+  returned question and wait for the answer instead of showing the planning backlog.
+  A step's `interaction_request` still decides voice and call steps.
+- Stop manual meeting confirmation for new introductions; follow the booking intent
+  and reporting workflow after re-checking the calendar.
+- Record the reviewed Nova revision and refreshed source fingerprints.
+
+## 0.0.3 — 2026-10-17
 
 - Refresh candidate and recruiter workflows for current MCP onboarding, required
   discovery, cards, private documents and owner views, mandates, and role-review gates.

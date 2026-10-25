@@ -38,9 +38,10 @@ it as a substitute for hiring progress.
 For authenticated staff posting on behalf of a company, use `admin_post_role` or
 `admin_post_roles` with the actual company domain and approved role details. A role
 must belong to the company's connected recruiter agent: omit `recruiter_email` to use
-the company admin's agent, or supply the verified recruiter's email. Staff may post for
-any company; company admins only for their own. Read the current schemas and server
-errors; never invent a company, recruiter, role details or administrative authority.
+the company admin's agent, or supply the verified recruiter's email. Only staff can use
+these tools; a company's own hiring team posts through its claimed recruiter agent with
+`post_role` or `post_roles`. Read the current schemas and server errors; never invent a
+company, recruiter, role details or administrative authority.
 
 For all workflows, use returned IDs, current tool schemas, and the actual human's
 authorization. Correct named validation fields. Follow retry hints and `Retry-After`.

@@ -8,7 +8,7 @@ by default.
 
 ## Package and installation
 
-Plugin `nova-room`, version 0.0.3, provides one hosted Streamable HTTP MCP server
+Plugin `nova-room`, version 0.0.4, provides one hosted Streamable HTTP MCP server
 (`nova-hiring-room`) and three skills: `nova-hiring-room-candidate`,
 `nova-hiring-room-recruiter`, and `nova-interview`. Candidate and recruiter skills include
 heartbeat guides. Shared guides cover onboarding, discovery, calls, billing, and Assist.

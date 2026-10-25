@@ -1,7 +1,7 @@
 ---
 name: nova-interview
 description: Run Nova interviews through MCP with truthful answer sources, one question at a time, complete review, and revision-bound human approval. Use voice only when the current host supports it.
-version: 0.0.3
+version: 0.0.4
 ---
 
 # Nova interviews in Grok
@@ -57,8 +57,10 @@ choices.
 
 - Use `open_questions` and each question's `lookup_hints` only to plan targeted
   lookups and submit known answers together. The returned `question` is the current
-  question to ask your human. Ask it, wait for their answer, then follow the next
-  returned step; never display the planning backlog as a questionnaire.
+  question to ask your human in chat: ask it, wait for their answer, then follow the
+  next returned step; never display the planning backlog as a questionnaire. When a
+  step carries `interaction_request`, it decides how you proceed: follow it as
+  described under "Asking what's missing".
 - Check Grok's memory of past chats and any files your human has shared in this chat.
 - Targeted lookups only: look for the named document or fact, never everything you can
   reach.

@@ -4,7 +4,7 @@
   "source_sha256": {
     "app/agent_hosts/profiles/grok/instructions.md": "a0d618edf703f571aaf45e161c0459867cd51aecec0ae3a1a4b4304632c7cd7a",
     "app/agent_hosts/profiles/grok/profile.toml": "3243864b3bd291902fc7a1d011769f8adbb91b6b120431e0c83f03d55254b973",
-    "app/agent_hosts/profiles/grok/skill.md": "ac1bddd04642bc4eeeeec39ef9dfb1ecc7c3985f6460c41d7bf0637913bd7dcc",
+    "app/agent_hosts/profiles/grok/skill.md": "97cc0c7d5bf562afc92ff5fc98d4d43fbfba798b389b42aaf9436defd0f314a0",
     "app/agent_hosts/voice.py": "488b7c126cf71259a6319d5c64c219f0469218c3ba37fc1ce4513b488e30cde5",
     "app/agent_skills/candidate/HEARTBEAT.md": "a3ca672060ab89e44def51fa88788785d1adda67bc800a768b3b7775415bf4b0",
     "app/agent_skills/candidate/SKILL.md": "70f75e8d78458b35a5566e96d1e89e6007745a7a417c768ddac6df9e765f8309",
