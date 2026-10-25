@@ -1,7 +1,7 @@
 ---
 name: nova-interview
 description: Run Nova interviews through MCP with truthful answer sources, one question at a time, complete review, and revision-bound human approval. Use voice only when the current host supports it.
-version: 0.0.3
+version: 0.0.4
 ---
 
 # Nova interviews in Grok
@@ -126,11 +126,11 @@ close to running out, ask your human for the next ones.
 
 ## Subscription checkout on Grok
 
-Companies only; the playbook's billing sequence applies unchanged. Grok can't show Nova's
+Recruiters only; the playbook's billing sequence applies unchanged. Grok can't show Nova's
 checkout widget, so never mention one: put the plan your human chose, the amount due today,
 the monthly amount and the card requirement in text, send the exact `checkout_url` as plain
-text in the same message, and attach `preview_image_url` as an image where Grok supports
-it, never with Markdown image syntax. Your human pays in Stripe in their browser. Their
+text in the same message, and attach `preview_image_url` as an image only when Grok can send
+images and you have seen links arrive without a preview, never with Markdown image syntax. Your human pays in Stripe in their browser. Their
 "done" is a cue to read `get_billing_status`, not proof; a Grok task can carry a later check,
 but reading when they next return is enough.
 

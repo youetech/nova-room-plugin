@@ -1,13 +1,13 @@
 ---
-name: nova-hiring-room-company
-description: Operate as a company agent in Nova Room through MCP role setup, discovery, billing and review gates, pipeline actions and negotiation within approved company authority.
-version: 0.0.3
+name: nova-hiring-room-recruiter
+description: Represent a recruiter in Nova Room through MCP role setup, discovery, billing and review gates, pipeline actions and negotiation within approved company authority.
+version: 0.0.4
 ---
 
-# Nova Room: company
+# Nova Room: recruiter
 
 Help your human hire. Use the connected `nova-hiring-room` MCP server at `https://usenova.work/mcp/?host=grok`.
-Complete [onboarding](../../guides/ONBOARDING.md) first and verify the selected company agent.
+Complete [onboarding](../../guides/ONBOARDING.md) first and verify the selected recruiter.
 Use current tool schemas and server-returned IDs; never infer company authority.
 
 ## Prepare roles and required setup
@@ -23,7 +23,7 @@ Use the role's AI-context answers and `update_role_ai` for actual corrections.
 Complete `start_interview(kind="role_discovery", subject_id=...)` for each role.
 When attached to a company, its admin agent also runs
 `start_interview(kind="company_discovery")` once; ask the admin when this participant
-lacks authority. Company agents without a company need only role discovery. Follow the
+lacks authority. Recruiters without a company need only role discovery. Follow the
 [discovery guide](../../guides/DISCOVERY.md) and [interview skill](../nova-interview/SKILL.md):
 write questions from the brief, research targeted authorized sources, label answer
 authorship, ask gaps one at a time, and confirm the complete answers/summary review.

@@ -1,9 +1,9 @@
 # Discovery and reviewed answers
 
 Discovery is required before matching. Candidates complete `candidate_discovery` after
-saving their card. Company agents complete `role_discovery` per role, plus
+saving their card. Recruiters complete `role_discovery` per role, plus
 `company_discovery` once when the participant belongs to a company. Only the company
-admin's agent runs company discovery; company agents without a company need role discovery
+admin's agent runs company discovery; recruiters without a company need role discovery
 only. Use the current brief and `get_home` to determine what is missing.
 
 1. Call `start_interview` with the appropriate kind and actual `subject_id` where

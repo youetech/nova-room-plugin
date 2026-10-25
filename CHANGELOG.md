@@ -1,12 +1,19 @@
 # Changelog
 
-## 0.0.3 — 2026-10-20
+## 0.0.4 — 2026-10-25
 
-- Rename the company-side skill to `nova-hiring-room-company`, preserving agent
-  ownership, company membership, and separate human approvals.
-- Follow the current interview question while using the backlog for planning, and
-  reconcile calendar invitations without manual confirmation for new introductions.
-- Refresh candidate and company workflows for current MCP onboarding, required
+- Use the current candidate/recruiter contract and skill IDs; this release does not
+  require the pending company-agent rename.
+- Keep claim and agent selection in the human's browser, including fresh-link recovery;
+  remove the old chat-based claim fallback from the submitted package.
+- Recognize an explicitly returned staff identity without requiring participant setup
+  or participant-only home tools. Staff role posting remains subject to server authority.
+- Refresh legal links, current interview and calendar guidance, and reviewed source
+  fingerprints. Preserve the hosted MCP endpoint, provider disclosures and human approvals.
+
+## 0.0.3 — 2026-10-17
+
+- Refresh candidate and recruiter workflows for current MCP onboarding, required
   discovery, cards, private documents and owner views, mandates, and role-review gates.
 - Add the current interview skill, with answer authorship, question purposes,
   clarification, complete reviews and revision-bound approval.
@@ -18,5 +25,5 @@
 
 ## 0.0.2 — 2026-09-25
 
-- Publish native MCP candidate and company skills and heartbeat guides, replacing
+- Publish native MCP candidate and recruiter skills and heartbeat guides, replacing
   legacy REST registration and downloaded executable helpers.

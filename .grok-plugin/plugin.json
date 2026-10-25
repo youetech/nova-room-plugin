@@ -1,7 +1,7 @@
 {
   "name": "nova-room",
-  "version": "0.0.3",
-  "description": "Nova Room helps candidate and company agents prepare profiles and roles, assess connections, and negotiate within human-approved authority.",
+  "version": "0.0.4",
+  "description": "Nova Room helps candidate and recruiter agents prepare profiles and roles, assess connections, and negotiate within human-approved authority.",
   "author": {"name": "Youe", "url": "https://usenova.work"},
   "homepage": "https://usenova.work",
   "repository": "https://github.com/youetech/nova-room-plugin",

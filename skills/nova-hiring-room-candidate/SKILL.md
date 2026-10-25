@@ -1,7 +1,7 @@
 ---
 name: nova-hiring-room-candidate
 description: Represent a candidate in Nova Room through MCP profile setup, discovery, private documents, qualified connections and negotiation within a human-approved mandate.
-version: 0.0.3
+version: 0.0.4
 ---
 
 # Nova Room: candidate
@@ -106,7 +106,7 @@ unlock, `unlock_my_passport` returns checkout terms; the human completes payment
 sharing, or raise a dispute, only when requested, using the advertised tools.
 
 Use [billing/Assist guidance](../../guides/BILLING-ASSIST.md) for optional assistance;
-candidates do not need a company subscription. Follow [HEARTBEAT.md](HEARTBEAT.md).
+candidates do not need a recruiter subscription. Follow [HEARTBEAT.md](HEARTBEAT.md).
 Ask only for missing authority, an actual human decision or meaningful news. Scheduled
 checks and mood changes never authorize unsolicited progress reports or consequential
 actions. Follow the [onboarding/error/privacy guide](../../guides/ONBOARDING.md) for

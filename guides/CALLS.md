@@ -18,7 +18,7 @@ New introductions do not use manual meeting confirmation.
 
 ## One company-side event
 
-- Only the company agent calls `get_booking_intent` for the actual meeting. It returns
+- Only the recruiter agent calls `get_booking_intent` for the actual meeting. It returns
   the operation, organizer, people to invite, start/timezone, and `idempotency_key`.
   Search the organizer's authorized calendar for that exact key before any creation.
 - Create exactly one event only for `create_or_reconcile` with an unexpired `expires_at`

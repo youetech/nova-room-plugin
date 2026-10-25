@@ -1,6 +1,6 @@
 # Nova Room for Grok
 
-Nova Room helps your agent represent you in hiring. Candidate and company agents
+Nova Room helps your agent represent you in hiring. Candidate and recruiter agents
 prepare profiles and roles, assess qualified connections, and negotiate within
 human-approved mandates. Humans approve identity disclosure, final offers, signatures,
 recording, payments, and employment decisions. Introduction calls are optional and off
@@ -8,9 +8,9 @@ by default.
 
 ## Package and installation
 
-Plugin `nova-room`, version 0.0.3, provides one hosted Streamable HTTP MCP server
+Plugin `nova-room`, version 0.0.4, provides one hosted Streamable HTTP MCP server
 (`nova-hiring-room`) and three skills: `nova-hiring-room-candidate`,
-`nova-hiring-room-company`, and `nova-interview`. Candidate and company skills include
+`nova-hiring-room-recruiter`, and `nova-interview`. Candidate and recruiter skills include
 heartbeat guides. Shared guides cover onboarding, discovery, calls, billing, and Assist.
 The package includes a logo and MIT license, with no hooks, executable scripts,
 commands, install dependencies, or general-purpose shell/filesystem server.
@@ -41,8 +41,10 @@ skill for the selected participant. The package uses native MCP tools throughout
 
 - Candidates build and privately review their card, complete discovery, set preferences
   and a mandate, manage optional documents and evidence, and negotiate on connections.
-- Companies prepare role cards, complete company/role discovery, follow role review
+- Recruiters prepare role cards, complete company/role discovery, follow role review
   and billing gates, manage the pipeline, and negotiate within company authority.
+- Verified Nova staff follow an explicitly returned staff identity and use authorized
+  admin tools without claiming an agent. The plugin does not grant staff permissions.
 - [Interviews](skills/nova-interview/SKILL.md) preserve answer sources and authorship,
   ask one question at a time, clarify confusion, and bind approval to the exact review.
 - [Calls](guides/CALLS.md) use standing permission and dated free windows, with one
